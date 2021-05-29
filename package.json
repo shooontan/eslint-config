@@ -1,0 +1,19 @@
+{
+  "name": "eslint-config",
+  "version": "0.0.1",
+  "description": "ESLint config",
+  "license": "MIT",
+  "author": "shooontan",
+  "scripts": {
+    "test": "jest"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.2",
+    "prettier": "^2.3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@shooontan/eslint-config",
+  "version": "0.0.1",
+  "description": "ESLint config",
+  "license": "MIT",
+  "main": "index.js",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shooontan/eslint-config.git",
+    "directory": "packages/eslint-config"
+  },
+  "author": "shooontan",
+  "dependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-prettier": "^3.4.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "eslint-config"
+  ]
+}
