@@ -1,9 +1,9 @@
+import {} from 'eslint';
 import fs from 'fs';
 import path from 'path';
 
-import {} from '../number';
-import {} from '../string';
-import {} from '.';
+import {} from '../../../test/fixtures/number';
+import {} from '../../../test/fixtures/string';
 
 fs.readFileSync(path.resolve(__dirname, 'string.js'));
 

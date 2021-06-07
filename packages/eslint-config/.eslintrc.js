@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['./packages/eslint-config'],
+  extends: ['.'],
   plugins: ['jest'],
   env: {
     'jest/globals': true,

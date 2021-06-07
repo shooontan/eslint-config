@@ -1,4 +1,4 @@
-const { Tester } = require('../../../test/utils');
+import { Tester } from '../../../test/utils';
 
 describe('eslint-config', () => {
   const tester = new Tester();
@@ -16,20 +16,18 @@ describe('eslint-config', () => {
   test('error', async () => {
     const res = await tester.lintFile('error');
     expect(res).toStrictEqual([
+      'simple-import-sort/imports',
       'no-unused-vars',
-      'prettier/prettier',
-      'import/order',
       'no-unused-vars',
-      'prettier/prettier',
-      'prettier/prettier',
-      'prettier/prettier',
       'default-param-last',
       'no-unused-vars',
       'no-unused-vars',
+      'simple-import-sort/imports',
+      'import/first',
+      'import/first',
       'no-unused-vars',
       'no-var',
       'no-unused-vars',
-      'prettier/prettier',
     ]);
   });
 });

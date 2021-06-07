@@ -4,32 +4,20 @@ module.exports = {
     node: true,
     es6: true,
   },
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: ['eslint:recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module',
   },
-  plugins: ['import'],
+  plugins: ['simple-import-sort', 'import'],
   rules: {
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
     'default-param-last': 'error',
     'no-console': 'warn',
     'no-var': 'error',
-    'import/order': [
-      'error',
-      {
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        'newlines-between': 'always-and-inside-groups',
-        alphabetize: {
-          order: 'asc',
-        },
-      },
-    ],
   },
 };

@@ -1,7 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-
-const { ESLint } = require('eslint');
+import { ESLint } from 'eslint';
+import fs from 'fs';
+import path from 'path';
 
 class Tester {
   constructor(pkgType) {
@@ -15,13 +14,9 @@ class Tester {
   }
 
   setupESLint(pkgName) {
+    const config = path.resolve(process.cwd(), 'packages', pkgName, 'index.js');
     const eslint = new ESLint({
-      overrideConfigFile: path.resolve(
-        process.cwd(),
-        'packages',
-        pkgName,
-        'index.js'
-      ),
+      overrideConfigFile: config,
       ignore: false,
       useEslintrc: false,
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -29,9 +24,9 @@ class Tester {
     return eslint;
   }
 
-  async lintFile(testFile) {
+  async lintFile(testFile, extension = 'js') {
     const code = fs.readFileSync(
-      path.resolve(this.pkgTestDir, `${testFile}.js`),
+      path.resolve(this.pkgTestDir, `${testFile}.${extension}`),
       'utf8'
     );
     const res = await this.eslint.lintText(code);
