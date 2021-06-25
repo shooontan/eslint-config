@@ -2,7 +2,7 @@ import { ESLint } from 'eslint';
 import fs from 'fs';
 import path from 'path';
 
-class Tester {
+export class Tester {
   constructor(pkgType) {
     let pkgName = 'eslint-config';
     if (pkgType) {
@@ -37,7 +37,3 @@ class Tester {
     return messages;
   }
 }
-
-module.exports = {
-  Tester,
-};

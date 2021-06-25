@@ -22,7 +22,8 @@ module.exports = {
 
 ### Config
 
-- eslint-config
+- [eslint-config](./packages/eslint-config)
+- [eslint-config-ts](./packages/eslint-config-ts)
 
 ## Development
 
