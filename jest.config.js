@@ -2,6 +2,6 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js'],
   testEnvironment: 'node',
   transform: {
-    '\\.[jt]sx?$': 'babel-jest',
+    '\\.[jt]sx?$': '@swc/jest',
   },
 };
